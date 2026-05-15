@@ -343,11 +343,12 @@
       opacity: 0.35;
     }
     .trash-label {
-      font-size: 0.6rem;
+      font-size: 0.65rem;
       letter-spacing: 3px;
-      color: #3a3a5a;
+      color: #6a6a9a;
       text-transform: uppercase;
       margin-bottom: 6px;
+      font-weight: 700;
     }
     .trash-text {
       font-size: 1rem;
@@ -357,18 +358,38 @@
       transition: opacity 0.45s ease;
     }
 
-    /* ── Rivalry Stats ── */
-    .rivalry-section {
-      margin-bottom: 24px;
-    }
-    .rivalry-label {
-      font-size: 0.6rem;
+    /* ── Sections shared label ── */
+    .section-label {
+      font-size: 0.65rem;
       letter-spacing: 3px;
-      color: #2e2e4a;
+      color: #6a6a9a;
       text-transform: uppercase;
       margin-bottom: 12px;
       text-align: center;
+      font-weight: 700;
     }
+
+    /* ── Sub-stat in hero panel ── */
+    .hero-sub-stats {
+      display: flex;
+      gap: 14px;
+      margin-top: 10px;
+      flex-wrap: wrap;
+    }
+    .hero-panel.water .hero-sub-stats { justify-content: flex-end; }
+    .sub-stat {
+      font-size: 0.68rem;
+      letter-spacing: 1.5px;
+      color: rgba(255,255,255,0.45);
+      text-transform: uppercase;
+    }
+    .sub-stat strong {
+      color: rgba(255,255,255,0.8);
+      font-weight: 900;
+    }
+
+    /* ── Rivalry Stats ── */
+    .rivalry-section { margin-bottom: 20px; }
     .rivalry-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
@@ -396,11 +417,7 @@
     .stat-card.water-accent::before { background: linear-gradient(90deg, transparent, rgba(0,180,216,0.5), transparent); }
     .stat-card.gold-accent::before  { background: linear-gradient(90deg, transparent, rgba(255,214,10,0.5), transparent); }
 
-    .stat-icon {
-      font-size: 1.4rem;
-      margin-bottom: 6px;
-      display: block;
-    }
+    .stat-icon { font-size: 1.4rem; margin-bottom: 6px; display: block; }
     .stat-value {
       font-family: 'Bebas Neue', sans-serif;
       font-size: 2rem;
@@ -416,43 +433,179 @@
       font-size: 0.62rem;
       letter-spacing: 2px;
       text-transform: uppercase;
-      color: #333;
+      color: #555;
       line-height: 1.4;
     }
-
-    /* Domination bar */
-    .dom-bar-wrap {
+    .dom-bar-wrap, .comeback-bar-wrap {
       margin-top: 10px;
       height: 5px;
       border-radius: 3px;
       background: #1a1a2e;
       overflow: hidden;
     }
-    .dom-bar-fill {
-      height: 100%;
-      border-radius: 3px;
-      transition: width 1s cubic-bezier(0.4, 0, 0.2, 1);
-      background: linear-gradient(90deg, var(--hatz-color), var(--water-color));
-    }
-
-    /* Comeback bar */
-    .comeback-bar-wrap {
-      margin-top: 10px;
-      height: 5px;
-      border-radius: 3px;
-      background: #1a1a2e;
-      overflow: hidden;
-    }
-    .comeback-bar-fill {
+    .dom-bar-fill, .comeback-bar-fill {
       height: 100%;
       border-radius: 3px;
       transition: width 1s cubic-bezier(0.4, 0, 0.2, 1);
     }
+    .dom-bar-fill  { background: linear-gradient(90deg, var(--hatz-color), var(--water-color)); }
     .comeback-bar-fill.hatz  { background: var(--hatz-color); }
     .comeback-bar-fill.water { background: var(--water-color); }
 
+    /* ── Multi-kill funnel ── */
+    .funnel-section { margin-bottom: 20px; }
+    .funnel-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    .funnel-card {
+      background: #0e0e1a;
+      border: 1px solid #1a1a2e;
+      border-radius: 12px;
+      padding: 16px 20px;
+      position: relative;
+      overflow: hidden;
+    }
+    .funnel-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+    }
+    .funnel-card.hatz::before  { background: linear-gradient(90deg, transparent, rgba(255,77,109,0.5), transparent); }
+    .funnel-card.water::before { background: linear-gradient(90deg, transparent, rgba(0,180,216,0.5), transparent); }
+
+    .funnel-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.1rem;
+      letter-spacing: 3px;
+      margin-bottom: 12px;
+    }
+    .funnel-card.hatz  .funnel-title { color: var(--hatz-color); }
+    .funnel-card.water .funnel-title { color: var(--water-color); }
+
+    .funnel-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 8px;
+    }
+    .funnel-label {
+      font-size: 0.6rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #555;
+      width: 55px;
+      flex-shrink: 0;
+    }
+    .funnel-bar-bg {
+      flex: 1;
+      height: 8px;
+      background: #1a1a2e;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    .funnel-bar-fill {
+      height: 100%;
+      border-radius: 4px;
+      transition: width 1s cubic-bezier(0.4, 0, 0.2, 1);
+      min-width: 4px;
+    }
+    .funnel-card.hatz  .funnel-bar-fill { background: var(--hatz-color); }
+    .funnel-card.water .funnel-bar-fill { background: var(--water-color); }
+    .funnel-num {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1rem;
+      letter-spacing: 1px;
+      width: 28px;
+      text-align: right;
+      flex-shrink: 0;
+    }
+    .funnel-card.hatz  .funnel-num { color: var(--hatz-color); }
+    .funnel-card.water .funnel-num { color: var(--water-color); }
+
+    /* penta row special */
+    .funnel-row.penta .funnel-label { color: var(--gold); }
+    .funnel-row.penta .funnel-bar-fill { background: var(--gold) !important; }
+    .funnel-row.penta .funnel-num { color: var(--gold); }
+
+    /* ── Top Champs ── */
+    .champs-section { margin-bottom: 20px; }
+    .champs-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    .champs-card {
+      background: #0e0e1a;
+      border: 1px solid #1a1a2e;
+      border-radius: 12px;
+      padding: 16px 20px;
+      position: relative;
+      overflow: hidden;
+    }
+    .champs-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+    }
+    .champs-card.hatz::before  { background: linear-gradient(90deg, transparent, rgba(255,77,109,0.5), transparent); }
+    .champs-card.water::before { background: linear-gradient(90deg, transparent, rgba(0,180,216,0.5), transparent); }
+
+    .champs-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.1rem;
+      letter-spacing: 3px;
+      margin-bottom: 12px;
+    }
+    .champs-card.hatz  .champs-title { color: var(--hatz-color); }
+    .champs-card.water .champs-title { color: var(--water-color); }
+
+    .champ-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 8px;
+    }
+    .champ-img {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      object-fit: cover;
+      flex-shrink: 0;
+      border: 1px solid #2a2a3a;
+    }
+    .champ-info { flex: 1; min-width: 0; }
+    .champ-name {
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: #ccc;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .champ-meta {
+      font-size: 0.6rem;
+      color: #555;
+      letter-spacing: 1px;
+      margin-top: 1px;
+    }
+    .champ-wr {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1rem;
+      letter-spacing: 1px;
+      flex-shrink: 0;
+    }
+    .champ-wr.good { color: #4ade80; }
+    .champ-wr.bad  { color: #f87171; }
+    .champ-wr.mid  { color: #888; }
+
     @media (max-width: 700px) {
       .rivalry-grid { grid-template-columns: 1fr 1fr; }
+      .funnel-grid  { grid-template-columns: 1fr; }
+      .champs-grid  { grid-template-columns: 1fr; }
     }
     @media (max-width: 420px) {
       .rivalry-grid { grid-template-columns: 1fr; }
@@ -532,8 +685,13 @@
         <div class="crown-wrap"><span id="crown-hatz"></span></div>
         <div class="player-name">Hatz</div>
         <div class="penta-count" id="count-hatz">—</div>
-        <div class="penta-label">Pentakills in ARAM</div>
+        <div class="penta-label">Pentakills in ARAM · 2026</div>
         <span class="status-badge status-tied" id="status-hatz">Loading…</span>
+        <div class="hero-sub-stats">
+          <div class="sub-stat">WR <strong id="wr-hatz">—</strong></div>
+          <div class="sub-stat">KDA <strong id="kda-hatz">—</strong></div>
+          <div class="sub-stat">Games <strong id="games-hatz">—</strong></div>
+        </div>
       </div>
     </div>
 
@@ -551,8 +709,13 @@
         <div class="crown-wrap"><span id="crown-water"></span></div>
         <div class="player-name">Water</div>
         <div class="penta-count" id="count-water">—</div>
-        <div class="penta-label">Pentakills in ARAM</div>
+        <div class="penta-label">Pentakills in ARAM · 2026</div>
         <span class="status-badge status-tied" id="status-water">Loading…</span>
+        <div class="hero-sub-stats">
+          <div class="sub-stat">WR <strong id="wr-water">—</strong></div>
+          <div class="sub-stat">KDA <strong id="kda-water">—</strong></div>
+          <div class="sub-stat">Games <strong id="games-water">—</strong></div>
+        </div>
       </div>
     </div>
 
@@ -565,24 +728,21 @@
 
   <!-- Rivalry Stats -->
   <div class="rivalry-section">
-    <div class="rivalry-label">📊 Rivalry Breakdown</div>
+    <div class="section-label">⚔️ Rivalry Breakdown</div>
     <div class="rivalry-grid">
 
-      <!-- Card 1: Who's leading & by how much -->
       <div class="stat-card" id="lead-card">
         <span class="stat-icon" id="lead-icon">⚔️</span>
         <div class="stat-value" id="lead-value">—</div>
         <div class="stat-desc" id="lead-desc">Current Lead</div>
       </div>
 
-      <!-- Card 2: Combined total -->
       <div class="stat-card gold-accent">
         <span class="stat-icon">⚡</span>
         <div class="stat-value" id="total-value">—</div>
         <div class="stat-desc">Total Pentas<br>Combined</div>
       </div>
 
-      <!-- Card 3: Domination % -->
       <div class="stat-card" id="dom-card">
         <span class="stat-icon" id="dom-icon">📊</span>
         <div class="stat-value" id="dom-value">—</div>
@@ -592,7 +752,6 @@
         </div>
       </div>
 
-      <!-- Card 4: Comeback math -->
       <div class="stat-card" id="comeback-card">
         <span class="stat-icon" id="comeback-icon">🎯</span>
         <div class="stat-value" id="comeback-value">—</div>
@@ -602,6 +761,77 @@
         </div>
       </div>
 
+    </div>
+  </div>
+
+  <!-- Multi-kill Funnel -->
+  <div class="funnel-section">
+    <div class="section-label">🔥 Kill Streak Breakdown</div>
+    <div class="funnel-grid">
+
+      <div class="funnel-card hatz">
+        <div class="funnel-title">Hatz</div>
+        <div class="funnel-row">
+          <div class="funnel-label">Double</div>
+          <div class="funnel-bar-bg"><div class="funnel-bar-fill" id="fh-double" style="width:0%"></div></div>
+          <div class="funnel-num" id="fn-hatz-double">—</div>
+        </div>
+        <div class="funnel-row">
+          <div class="funnel-label">Triple</div>
+          <div class="funnel-bar-bg"><div class="funnel-bar-fill" id="fh-triple" style="width:0%"></div></div>
+          <div class="funnel-num" id="fn-hatz-triple">—</div>
+        </div>
+        <div class="funnel-row">
+          <div class="funnel-label">Quadra</div>
+          <div class="funnel-bar-bg"><div class="funnel-bar-fill" id="fh-quadra" style="width:0%"></div></div>
+          <div class="funnel-num" id="fn-hatz-quadra">—</div>
+        </div>
+        <div class="funnel-row penta">
+          <div class="funnel-label">⚡ Penta</div>
+          <div class="funnel-bar-bg"><div class="funnel-bar-fill" id="fh-penta" style="width:0%"></div></div>
+          <div class="funnel-num" id="fn-hatz-penta">—</div>
+        </div>
+      </div>
+
+      <div class="funnel-card water">
+        <div class="funnel-title">Water</div>
+        <div class="funnel-row">
+          <div class="funnel-label">Double</div>
+          <div class="funnel-bar-bg"><div class="funnel-bar-fill" id="fw-double" style="width:0%"></div></div>
+          <div class="funnel-num" id="fn-water-double">—</div>
+        </div>
+        <div class="funnel-row">
+          <div class="funnel-label">Triple</div>
+          <div class="funnel-bar-bg"><div class="funnel-bar-fill" id="fw-triple" style="width:0%"></div></div>
+          <div class="funnel-num" id="fn-water-triple">—</div>
+        </div>
+        <div class="funnel-row">
+          <div class="funnel-label">Quadra</div>
+          <div class="funnel-bar-bg"><div class="funnel-bar-fill" id="fw-quadra" style="width:0%"></div></div>
+          <div class="funnel-num" id="fn-water-quadra">—</div>
+        </div>
+        <div class="funnel-row penta">
+          <div class="funnel-label">⚡ Penta</div>
+          <div class="funnel-bar-bg"><div class="funnel-bar-fill" id="fw-penta" style="width:0%"></div></div>
+          <div class="funnel-num" id="fn-water-penta">—</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Top Champions -->
+  <div class="champs-section">
+    <div class="section-label">🏆 Top Champions (2026 ARAM)</div>
+    <div class="champs-grid">
+      <div class="champs-card hatz">
+        <div class="champs-title">Hatz</div>
+        <div id="champs-hatz-list"></div>
+      </div>
+      <div class="champs-card water">
+        <div class="champs-title">Water</div>
+        <div id="champs-water-list"></div>
+      </div>
     </div>
   </div>
 
@@ -719,6 +949,51 @@ function pickLine(h, w) {
 /* ── Render ─────────────────────────────────────────────── */
 let trashTimer;
 
+function renderChamps(champs, containerId) {
+  const el = document.getElementById(containerId);
+  if (!champs || champs.length === 0) {
+    el.innerHTML = '<div style="color:#333;font-size:0.75rem;padding:8px 0">No data yet</div>';
+    return;
+  }
+  el.innerHTML = champs.map(c => {
+    const wr = c.win_rate || 0;
+    const wrClass = wr >= 55 ? 'good' : wr >= 45 ? 'mid' : 'bad';
+    return `
+      <div class="champ-row">
+        <img class="champ-img" src="${c.image_url}" alt="${c.name}" onerror="this.style.display='none'">
+        <div class="champ-info">
+          <div class="champ-name">${c.name}</div>
+          <div class="champ-meta">${c.plays} games · ${c.kda} KDA</div>
+        </div>
+        <div class="champ-wr ${wrClass}">${wr}%</div>
+      </div>`;
+  }).join('');
+}
+
+function renderFunnel(mk, pentas, prefix) {
+  const max = mk.double || 1; // scale bars off the biggest number
+  const rows = [
+    ['double', mk.double],
+    ['triple', mk.triple],
+    ['quadra', mk.quadra],
+    ['penta',  pentas],
+  ];
+  rows.forEach(([tier, val]) => {
+    const pct = Math.round((val / max) * 100);
+    document.getElementById(`${prefix}-${tier}`).style.width = pct + '%';
+    document.getElementById(`fn-${prefix.replace('f','').replace('h','hatz').replace('w','water')}-${tier}`);
+  });
+  // simpler direct id approach:
+  const p = prefix === 'fh' ? 'hatz' : 'water';
+  [['double', mk.double], ['triple', mk.triple], ['quadra', mk.quadra], ['penta', pentas]]
+    .forEach(([tier, val]) => {
+      const bar = document.getElementById(`${prefix}-${tier}`);
+      const num = document.getElementById(`fn-${p}-${tier}`);
+      if (bar) bar.style.width = Math.round((val / max) * 100) + '%';
+      if (num) num.textContent = val;
+    });
+}
+
 function render(d) {
   const h = d.hatz.pentakills;
   const w = d.water.pentakills;
@@ -728,6 +1003,16 @@ function render(d) {
   document.getElementById('count-hatz').textContent  = h;
   document.getElementById('count-water').textContent = w;
   document.getElementById('last-updated').textContent = d.lastUpdated || 'Unknown';
+
+  // Sub-stats in hero panels
+  const hKda = d.hatz.avg_kda || {};
+  const wKda = d.water.avg_kda || {};
+  document.getElementById('wr-hatz').textContent    = d.hatz.win_rate   ? d.hatz.win_rate + '%'   : '—';
+  document.getElementById('wr-water').textContent   = d.water.win_rate  ? d.water.win_rate + '%'  : '—';
+  document.getElementById('kda-hatz').textContent   = hKda.ratio  || '—';
+  document.getElementById('kda-water').textContent  = wKda.ratio  || '—';
+  document.getElementById('games-hatz').textContent = d.hatz.games  || '—';
+  document.getElementById('games-water').textContent= d.water.games || '—';
 
   const pill = document.getElementById('diff-pill');
   pill.textContent = absDiff === 0 ? 'TIED' : `+${absDiff} ${diff > 0 ? 'HATZ' : 'WATER'}`;
@@ -865,6 +1150,16 @@ function render(d) {
     cbBar.className    = 'comeback-bar-fill hatz';
     cbBar.style.background = '';
   }
+
+  // Multi-kill funnels
+  const hMk = d.hatz.multi_kills  || {};
+  const wMk = d.water.multi_kills || {};
+  renderFunnel(hMk, h, 'fh');
+  renderFunnel(wMk, w, 'fw');
+
+  // Top champs
+  renderChamps(d.hatz.top_champs,  'champs-hatz-list');
+  renderChamps(d.water.top_champs, 'champs-water-list');
 
   clearInterval(trashTimer);
   const el = document.getElementById('trash-text');
