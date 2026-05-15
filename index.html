@@ -357,6 +357,107 @@
       transition: opacity 0.45s ease;
     }
 
+    /* ── Rivalry Stats ── */
+    .rivalry-section {
+      margin-bottom: 24px;
+    }
+    .rivalry-label {
+      font-size: 0.6rem;
+      letter-spacing: 3px;
+      color: #2e2e4a;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+      text-align: center;
+    }
+    .rivalry-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+    }
+    .stat-card {
+      background: #0e0e1a;
+      border: 1px solid #1a1a2e;
+      border-radius: 12px;
+      padding: 18px 16px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      transition: border-color 0.3s ease;
+    }
+    .stat-card:hover { border-color: #2a2a4a; }
+    .stat-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, #1f1f3f, transparent);
+    }
+    .stat-card.hatz-accent::before  { background: linear-gradient(90deg, transparent, rgba(255,77,109,0.5), transparent); }
+    .stat-card.water-accent::before { background: linear-gradient(90deg, transparent, rgba(0,180,216,0.5), transparent); }
+    .stat-card.gold-accent::before  { background: linear-gradient(90deg, transparent, rgba(255,214,10,0.5), transparent); }
+
+    .stat-icon {
+      font-size: 1.4rem;
+      margin-bottom: 6px;
+      display: block;
+    }
+    .stat-value {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 2rem;
+      letter-spacing: 2px;
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+    .stat-card.hatz-accent  .stat-value { color: var(--hatz-color); }
+    .stat-card.water-accent .stat-value { color: var(--water-color); }
+    .stat-card.gold-accent  .stat-value { color: var(--gold); }
+    .stat-card.neutral      .stat-value { color: #888; }
+    .stat-desc {
+      font-size: 0.62rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #333;
+      line-height: 1.4;
+    }
+
+    /* Domination bar */
+    .dom-bar-wrap {
+      margin-top: 10px;
+      height: 5px;
+      border-radius: 3px;
+      background: #1a1a2e;
+      overflow: hidden;
+    }
+    .dom-bar-fill {
+      height: 100%;
+      border-radius: 3px;
+      transition: width 1s cubic-bezier(0.4, 0, 0.2, 1);
+      background: linear-gradient(90deg, var(--hatz-color), var(--water-color));
+    }
+
+    /* Comeback bar */
+    .comeback-bar-wrap {
+      margin-top: 10px;
+      height: 5px;
+      border-radius: 3px;
+      background: #1a1a2e;
+      overflow: hidden;
+    }
+    .comeback-bar-fill {
+      height: 100%;
+      border-radius: 3px;
+      transition: width 1s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .comeback-bar-fill.hatz  { background: var(--hatz-color); }
+    .comeback-bar-fill.water { background: var(--water-color); }
+
+    @media (max-width: 700px) {
+      .rivalry-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 420px) {
+      .rivalry-grid { grid-template-columns: 1fr; }
+    }
+
     /* ── Footer ── */
     .footer-row {
       display: flex;
@@ -460,6 +561,48 @@
   <div class="trash-box">
     <div class="trash-label">The Commentary Box</div>
     <div class="trash-text" id="trash-text">Crunching the numbers…</div>
+  </div>
+
+  <!-- Rivalry Stats -->
+  <div class="rivalry-section">
+    <div class="rivalry-label">📊 Rivalry Breakdown</div>
+    <div class="rivalry-grid">
+
+      <!-- Card 1: Who's leading & by how much -->
+      <div class="stat-card" id="lead-card">
+        <span class="stat-icon" id="lead-icon">⚔️</span>
+        <div class="stat-value" id="lead-value">—</div>
+        <div class="stat-desc" id="lead-desc">Current Lead</div>
+      </div>
+
+      <!-- Card 2: Combined total -->
+      <div class="stat-card gold-accent">
+        <span class="stat-icon">⚡</span>
+        <div class="stat-value" id="total-value">—</div>
+        <div class="stat-desc">Total Pentas<br>Combined</div>
+      </div>
+
+      <!-- Card 3: Domination % -->
+      <div class="stat-card" id="dom-card">
+        <span class="stat-icon" id="dom-icon">📊</span>
+        <div class="stat-value" id="dom-value">—</div>
+        <div class="stat-desc" id="dom-desc">Share of All Pentas</div>
+        <div class="dom-bar-wrap">
+          <div class="dom-bar-fill" id="dom-bar" style="width:50%"></div>
+        </div>
+      </div>
+
+      <!-- Card 4: Comeback math -->
+      <div class="stat-card" id="comeback-card">
+        <span class="stat-icon" id="comeback-icon">🎯</span>
+        <div class="stat-value" id="comeback-value">—</div>
+        <div class="stat-desc" id="comeback-desc">Pentas to Catch Up</div>
+        <div class="comeback-bar-wrap">
+          <div class="comeback-bar-fill" id="comeback-bar" style="width:0%"></div>
+        </div>
+      </div>
+
+    </div>
   </div>
 
   <div class="footer-row">
@@ -615,6 +758,112 @@ function render(d) {
   } else {
     stH.textContent = '🤝 Tied'; stH.className = 'status-badge status-tied';
     stW.textContent = '🤝 Tied'; stW.className = 'status-badge status-tied';
+  }
+
+  /* ── Rivalry stats ── */
+  const total = h + w;
+
+  // Card 1: Lead
+  const leadCard  = document.getElementById('lead-card');
+  const leadIcon  = document.getElementById('lead-icon');
+  const leadVal   = document.getElementById('lead-value');
+  const leadDesc  = document.getElementById('lead-desc');
+  leadCard.className = 'stat-card';
+  if (diff > 0) {
+    leadCard.classList.add('hatz-accent');
+    leadIcon.textContent = '🗡️';
+    leadVal.textContent  = `+${diff}`;
+    leadVal.style.color  = 'var(--hatz-color)';
+    leadDesc.textContent = 'Hatz leads by';
+  } else if (diff < 0) {
+    leadCard.classList.add('water-accent');
+    leadIcon.textContent = '💧';
+    leadVal.textContent  = `+${absDiff}`;
+    leadVal.style.color  = 'var(--water-color)';
+    leadDesc.textContent = 'Water leads by';
+  } else {
+    leadCard.classList.add('neutral');
+    leadIcon.textContent = '🤝';
+    leadVal.textContent  = 'TIE';
+    leadVal.style.color  = '#666';
+    leadDesc.textContent = 'Completely even';
+  }
+
+  // Card 2: Total
+  document.getElementById('total-value').textContent = total || '—';
+
+  // Card 3: Domination %
+  const domCard = document.getElementById('dom-card');
+  const domIcon = document.getElementById('dom-icon');
+  const domVal  = document.getElementById('dom-value');
+  const domDesc = document.getElementById('dom-desc');
+  const domBar  = document.getElementById('dom-bar');
+  domCard.className = 'stat-card';
+  if (total > 0) {
+    const hPct = Math.round((h / total) * 100);
+    const wPct = 100 - hPct;
+    if (h >= w) {
+      domCard.classList.add('hatz-accent');
+      domIcon.textContent = '🔴';
+      domVal.textContent  = `${hPct}%`;
+      domVal.style.color  = 'var(--hatz-color)';
+      domDesc.textContent = "Hatz's share of all pentas";
+    } else {
+      domCard.classList.add('water-accent');
+      domIcon.textContent = '🔵';
+      domVal.textContent  = `${wPct}%`;
+      domVal.style.color  = 'var(--water-color)';
+      domDesc.textContent = "Water's share of all pentas";
+    }
+    // Bar: left = hatz %, right = water %
+    domBar.style.width = `${hPct}%`;
+    domBar.style.background = `linear-gradient(90deg, var(--hatz-color) 0%, var(--water-color) 100%)`;
+  } else {
+    domCard.classList.add('neutral');
+    domVal.textContent = '50/50';
+    domVal.style.color = '#555';
+    domDesc.textContent = 'No data yet';
+    domBar.style.width = '50%';
+  }
+
+  // Card 4: Comeback
+  const cbCard  = document.getElementById('comeback-card');
+  const cbIcon  = document.getElementById('comeback-icon');
+  const cbVal   = document.getElementById('comeback-value');
+  const cbDesc  = document.getElementById('comeback-desc');
+  const cbBar   = document.getElementById('comeback-bar');
+  cbCard.className = 'stat-card';
+  if (absDiff === 0) {
+    cbCard.classList.add('neutral');
+    cbIcon.textContent = '😤';
+    cbVal.textContent  = '0';
+    cbVal.style.color  = '#555';
+    cbDesc.textContent = 'Both stuck at the same\nhumiliating number';
+    cbBar.style.width  = '100%';
+    cbBar.className    = 'comeback-bar-fill';
+    cbBar.style.background = '#333';
+  } else if (diff > 0) {
+    // Water needs to close the gap
+    cbCard.classList.add('water-accent');
+    cbIcon.textContent = '💧';
+    cbVal.textContent  = `${absDiff + 1}`;
+    cbVal.style.color  = 'var(--water-color)';
+    cbDesc.textContent = 'Pentas Water needs\nto take the lead';
+    const progress = total > 0 ? Math.min(95, Math.round((w / (w + absDiff + 1)) * 100)) : 10;
+    cbBar.style.width  = `${progress}%`;
+    cbBar.className    = 'comeback-bar-fill water';
+    cbBar.style.background = '';
+  } else {
+    // Hatz needs to close the gap
+    cbCard.classList.add('hatz-accent');
+    cbIcon.textContent = '🗡️';
+    cbVal.textContent  = `${absDiff + 1}`;
+    cbVal.style.color  = 'var(--hatz-color)';
+    cbDesc.textContent = 'Pentas Hatz needs\nto take the lead';
+    const progress = total > 0 ? Math.min(95, Math.round((h / (h + absDiff + 1)) * 100)) : 10;
+    cbBar.style.width  = `${progress}%`;
+    cbBar.className    = 'comeback-bar-fill hatz';
+    cbBar.style.background = '';
   }
 
   clearInterval(trashTimer);
