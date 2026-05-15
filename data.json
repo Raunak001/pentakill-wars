@@ -2,94 +2,114 @@
   "hatz": {
     "name": "Hatz",
     "pentakills": 16,
-    "topChamps": [
+    "win_rate": 50.2,
+    "games": 556,
+    "wins": 279,
+    "losses": 277,
+    "avg_kda": {
+      "kills": 12.6,
+      "deaths": 10.1,
+      "assists": 24.2,
+      "ratio": 3.65
+    },
+    "multi_kills": {
+      "double": 1168,
+      "triple": 283,
+      "quadra": 53
+    },
+    "top_champs": [
       {
-        "championName": "Akshan",
-        "count": 5
+        "name": "Ekko",
+        "image_url": "https://opgg-static.akamaized.net/meta/images/lol/16.10.1/champion/Ekko.png",
+        "win_rate": 65,
+        "plays": 34,
+        "kda": 3.52
       },
       {
-        "championName": "Samira",
-        "count": 3
+        "name": "Akshan",
+        "image_url": "https://opgg-static.akamaized.net/meta/images/lol/16.10.1/champion/Akshan.png",
+        "win_rate": 45,
+        "plays": 31,
+        "kda": 3.26
       },
       {
-        "championName": "Ekko",
-        "count": 1
+        "name": "Wukong",
+        "image_url": "https://opgg-static.akamaized.net/meta/images/lol/16.10.1/champion/MonkeyKing.png",
+        "win_rate": 50,
+        "plays": 26,
+        "kda": 3.12
       },
       {
-        "championName": "Pantheon",
-        "count": 1
+        "name": "Pantheon",
+        "image_url": "https://opgg-static.akamaized.net/meta/images/lol/16.10.1/champion/Pantheon.png",
+        "win_rate": 68,
+        "plays": 22,
+        "kda": 3.81
       },
       {
-        "championName": "Briar",
-        "count": 1
-      },
-      {
-        "championName": "MonkeyKing",
-        "count": 1
-      },
-      {
-        "championName": "Mel",
-        "count": 1
-      },
-      {
-        "championName": "Caitlyn",
-        "count": 1
-      },
-      {
-        "championName": "Ahri",
-        "count": 1
-      },
-      {
-        "championName": "Yunara",
-        "count": 1
+        "name": "Briar",
+        "image_url": "https://opgg-static.akamaized.net/meta/images/lol/16.10.1/champion/Briar.png",
+        "win_rate": 65,
+        "plays": 20,
+        "kda": 3
       }
     ]
   },
   "water": {
     "name": "Water",
-    "pentakills": 13,
-    "topChamps": [
+    "pentakills": 15,
+    "win_rate": 53.7,
+    "games": 369,
+    "wins": 198,
+    "losses": 171,
+    "avg_kda": {
+      "kills": 13.9,
+      "deaths": 11.1,
+      "assists": 22.2,
+      "ratio": 3.26
+    },
+    "multi_kills": {
+      "double": 884,
+      "triple": 219,
+      "quadra": 65
+    },
+    "top_champs": [
       {
-        "championName": "Zaahen",
-        "count": 3
+        "name": "Jhin",
+        "image_url": "https://opgg-static.akamaized.net/meta/images/lol/16.10.1/champion/Jhin.png",
+        "win_rate": 57,
+        "plays": 14,
+        "kda": 4.68
       },
       {
-        "championName": "Draven",
-        "count": 2
+        "name": "Ryze",
+        "image_url": "https://opgg-static.akamaized.net/meta/images/lol/16.10.1/champion/Ryze.png",
+        "win_rate": 43,
+        "plays": 14,
+        "kda": 3.54
       },
       {
-        "championName": "Aurora",
-        "count": 1
+        "name": "Jinx",
+        "image_url": "https://opgg-static.akamaized.net/meta/images/lol/16.10.1/champion/Jinx.png",
+        "win_rate": 67,
+        "plays": 12,
+        "kda": 3.63
       },
       {
-        "championName": "Jinx",
-        "count": 1
+        "name": "Aurora",
+        "image_url": "https://opgg-static.akamaized.net/meta/images/lol/16.10.1/champion/Aurora.png",
+        "win_rate": 58,
+        "plays": 12,
+        "kda": 3.53
       },
       {
-        "championName": "Vayne",
-        "count": 1
-      },
-      {
-        "championName": "Smolder",
-        "count": 1
-      },
-      {
-        "championName": "Tristana",
-        "count": 1
-      },
-      {
-        "championName": "Gangplank",
-        "count": 1
-      },
-      {
-        "championName": "Pyke",
-        "count": 1
-      },
-      {
-        "championName": "Quinn",
-        "count": 1
+        "name": "Ezreal",
+        "image_url": "https://opgg-static.akamaized.net/meta/images/lol/16.10.1/champion/Ezreal.png",
+        "win_rate": 45,
+        "plays": 11,
+        "kda": 3.29
       }
     ]
   },
-  "lastUpdated": "2026-05-15 19:10 UTC"
+  "lastUpdated": "2026-05-15 23:10 UTC"
 }
