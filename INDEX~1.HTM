@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>⚡ PENTAKILL WARS ⚡</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Exo+2:wght@400;700;900&display=swap');
+
+    :root {
+      --hatz-color: #ff4d6d;
+      --water-color: #00b4d8;
+      --gold: #ffd60a;
+      --bg: #0a0a0f;
+      --card-bg: #12121c;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: var(--bg);
+      font-family: 'Exo 2', sans-serif;
+      color: #fff;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* ── Starfield ── */
+    #starfield {
+      position: fixed; inset: 0; z-index: 0;
+      pointer-events: none;
+    }
+
+    /* ── Layout ── */
+    .page {
+      position: relative; z-index: 1;
+      padding: 28px 16px 56px;
+      max-width: 980px;
+      margin: 0 auto;
+    }
+
+    /* ── Header ── */
+    header { text-align: center; margin-bottom: 36px; }
+
+    .main-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(2.8rem, 8vw, 6.5rem);
+      letter-spacing: 8px;
+      line-height: 1;
+      background: linear-gradient(100deg, var(--hatz-color) 0%, var(--gold) 50%, var(--water-color) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      filter: drop-shadow(0 0 18px rgba(255,214,10,0.35));
+    }
+
+    .subtitle {
+      font-size: 0.95rem;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: #666;
+      margin-top: 8px;
+    }
+
+    .live-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255, 77, 109, 0.12);
+      border: 1px solid rgba(255, 77, 109, 0.35);
+      color: var(--hatz-color);
+      font-size: 0.7rem;
+      font-weight: 900;
+      letter-spacing: 2px;
+      padding: 4px 14px;
+      border-radius: 20px;
+      text-transform: uppercase;
+      margin-top: 14px;
+    }
+    .live-dot {
+      width: 7px; height: 7px;
+      border-radius: 50%;
+      background: var(--hatz-color);
+      animation: blink 1.2s ease-in-out infinite;
+    }
+    @keyframes blink { 0%,100% { opacity: 1; } 50% { opacity: 0.2; } }
+
+    /* ── Scoreboard ── */
+    .scoreboard {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      gap: 18px;
+      align-items: center;
+      margin-bottom: 28px;
+    }
+
+    .player-card {
+      background: var(--card-bg);
+      border-radius: 18px;
+      padding: 30px 22px 24px;
+      text-align: center;
+      border: 2px solid transparent;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+    .player-card:hover { transform: translateY(-5px); }
+
+    /* Colored top border glow strip */
+    .player-card::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+    }
+    .player-card.hatz { border-color: rgba(255,77,109,0.5); }
+    .player-card.hatz::after { background: linear-gradient(90deg, transparent, var(--hatz-color), transparent); }
+    .player-card.water { border-color: rgba(0,180,216,0.5); }
+    .player-card.water::after { background: linear-gradient(90deg, transparent, var(--water-color), transparent); }
+
+    /* Winner glow */
+    .player-card.winner.hatz {
+      border-color: var(--hatz-color);
+      box-shadow: 0 0 20px rgba(255,77,109,0.4), 0 0 50px rgba(255,77,109,0.15);
+      animation: glow-hatz 2.2s ease-in-out infinite;
+    }
+    .player-card.winner.water {
+      border-color: var(--water-color);
+      box-shadow: 0 0 20px rgba(0,180,216,0.4), 0 0 50px rgba(0,180,216,0.15);
+      animation: glow-water 2.2s ease-in-out infinite;
+    }
+    @keyframes glow-hatz {
+      0%,100% { box-shadow: 0 0 20px rgba(255,77,109,0.4), 0 0 50px rgba(255,77,109,0.15); }
+      50%      { box-shadow: 0 0 35px rgba(255,77,109,0.7), 0 0 70px rgba(255,77,109,0.3); }
+    }
+    @keyframes glow-water {
+      0%,100% { box-shadow: 0 0 20px rgba(0,180,216,0.4), 0 0 50px rgba(0,180,216,0.15); }
+      50%      { box-shadow: 0 0 35px rgba(0,180,216,0.7), 0 0 70px rgba(0,180,216,0.3); }
+    }
+
+    /* Crown */
+    .crown-wrap { height: 54px; display: flex; align-items: center; justify-content: center; margin-bottom: 2px; }
+    .crown {
+      font-size: 2.4rem;
+      display: inline-block;
+      animation: crown-bob 0.9s ease-in-out infinite alternate;
+    }
+    @keyframes crown-bob {
+      from { transform: translateY(0) rotate(-6deg); }
+      to   { transform: translateY(-9px) rotate(6deg); }
+    }
+
+    .player-name {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 2.6rem;
+      letter-spacing: 5px;
+      margin-bottom: 6px;
+    }
+    .player-card.hatz .player-name { color: var(--hatz-color); text-shadow: 0 0 25px rgba(255,77,109,0.5); }
+    .player-card.water .player-name { color: var(--water-color); text-shadow: 0 0 25px rgba(0,180,216,0.5); }
+
+    .penta-count {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(4.5rem, 11vw, 8rem);
+      line-height: 1;
+      letter-spacing: 2px;
+    }
+    .player-card.hatz .penta-count { color: var(--hatz-color); }
+    .player-card.water .penta-count { color: var(--water-color); }
+
+    .penta-label {
+      font-size: 0.7rem;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      color: #555;
+      margin-top: 4px;
+      margin-bottom: 16px;
+    }
+
+    .status-badge {
+      font-size: 0.82rem;
+      font-weight: 900;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 6px 18px;
+      border-radius: 20px;
+      display: inline-block;
+    }
+    .status-winning { background: rgba(255,214,10,0.18); color: var(--gold); border: 1px solid rgba(255,214,10,0.5); }
+    .status-losing  { background: rgba(255,255,255,0.04); color: #555; border: 1px solid #2a2a2a; }
+    .status-tied    { background: rgba(255,255,255,0.07); color: #777; border: 1px solid #333; }
+
+    /* ── VS divider ── */
+    .vs-col {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+    .vs-text {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 3.2rem;
+      color: var(--gold);
+      text-shadow: 0 0 24px rgba(255,214,10,0.6);
+    }
+    .zap {
+      font-size: 2.2rem;
+      animation: zap-anim 0.55s ease-in-out infinite alternate;
+    }
+    @keyframes zap-anim {
+      from { transform: scale(1) rotate(-12deg); opacity: 0.65; }
+      to   { transform: scale(1.35) rotate(12deg); opacity: 1; }
+    }
+    .diff-pill {
+      background: var(--gold);
+      color: #000;
+      font-weight: 900;
+      font-size: 0.7rem;
+      letter-spacing: 1.5px;
+      padding: 5px 13px;
+      border-radius: 14px;
+      white-space: nowrap;
+      text-transform: uppercase;
+    }
+
+    /* ── Trash talk ── */
+    .trash-box {
+      background: linear-gradient(135deg, #13132a 0%, #0e1829 100%);
+      border: 1px solid #1f1f3a;
+      border-radius: 14px;
+      padding: 22px 28px;
+      text-align: center;
+      margin-bottom: 24px;
+      position: relative;
+    }
+    .trash-box::before {
+      content: '💬';
+      position: absolute;
+      left: 20px; top: 50%;
+      transform: translateY(-50%);
+      font-size: 1.4rem;
+      opacity: 0.4;
+    }
+    .trash-label {
+      font-size: 0.62rem;
+      letter-spacing: 3px;
+      color: #444;
+      text-transform: uppercase;
+      margin-bottom: 7px;
+    }
+    .trash-text {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #ccc;
+      min-height: 1.6em;
+      transition: opacity 0.45s ease;
+    }
+
+    /* ── Footer ── */
+    .footer-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      font-size: 0.72rem;
+      color: #333;
+      letter-spacing: 1px;
+      padding-top: 16px;
+      border-top: 1px solid #18182a;
+    }
+    .footer-row a { color: #444; text-decoration: none; transition: color 0.2s; }
+    .footer-row a:hover { color: #999; }
+
+    /* ── Confetti ── */
+    .confetti {
+      position: fixed;
+      pointer-events: none;
+      z-index: 999;
+      border-radius: 2px;
+      animation: fall var(--d, 3s) linear var(--delay, 0s) forwards;
+    }
+    @keyframes fall {
+      0%   { transform: translateY(-30px) rotate(0deg); opacity: 1; }
+      100% { transform: translateY(110vh) rotate(800deg); opacity: 0; }
+    }
+
+    /* ── Error state ── */
+    .error-msg {
+      text-align: center;
+      padding: 40px;
+      color: #555;
+      font-size: 0.9rem;
+      letter-spacing: 1px;
+    }
+
+    /* ── Mobile ── */
+    @media (max-width: 560px) {
+      .scoreboard { grid-template-columns: 1fr; }
+      .vs-col { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<canvas id="starfield"></canvas>
+
+<div class="page">
+  <header>
+    <div class="main-title">⚡ PENTAKILL WARS ⚡</div>
+    <div class="subtitle">The only stat that matters</div>
+    <div class="live-pill"><span class="live-dot"></span> Live Scoreboard</div>
+  </header>
+
+  <div class="scoreboard">
+    <!-- Hatz -->
+    <div class="player-card hatz" id="card-hatz">
+      <div class="crown-wrap"><span id="crown-hatz"></span></div>
+      <div class="player-name">Hatz</div>
+      <div class="penta-count" id="count-hatz">—</div>
+      <div class="penta-label">Pentakills in ARAM</div>
+      <span class="status-badge status-tied" id="status-hatz">Loading…</span>
+    </div>
+
+    <!-- VS -->
+    <div class="vs-col">
+      <div class="vs-text">VS</div>
+      <div class="zap">⚡</div>
+      <div class="diff-pill" id="diff-pill">—</div>
+    </div>
+
+    <!-- Water -->
+    <div class="player-card water" id="card-water">
+      <div class="crown-wrap"><span id="crown-water"></span></div>
+      <div class="player-name">Water</div>
+      <div class="penta-count" id="count-water">—</div>
+      <div class="penta-label">Pentakills in ARAM</div>
+      <span class="status-badge status-tied" id="status-water">Loading…</span>
+    </div>
+  </div>
+
+  <div class="trash-box">
+    <div class="trash-label">The Commentary Box</div>
+    <div class="trash-text" id="trash-text">Crunching the numbers…</div>
+  </div>
+
+  <div class="footer-row">
+    <span>Updated: <span id="last-updated">—</span></span>
+    <span>Refreshes nightly at midnight · Data from <a href="https://dpm.lol" target="_blank">dpm.lol</a></span>
+  </div>
+</div>
+
+<script>
+/* ── Starfield ─────────────────────────────────────────── */
+(function () {
+  const canvas = document.getElementById('starfield');
+  const ctx = canvas.getContext('2d');
+  let stars = [];
+
+  function resize() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    stars = Array.from({ length: 220 }, () => ({
+      x: Math.random() * canvas.width,
+      y: Math.random() * canvas.height,
+      r: Math.random() * 1.4 + 0.2,
+      a: Math.random(),
+      da: (Math.random() * 0.004 + 0.001) * (Math.random() < 0.5 ? 1 : -1),
+    }));
+  }
+
+  function draw() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    for (const s of stars) {
+      s.a += s.da;
+      if (s.a < 0.05 || s.a > 0.95) s.da *= -1;
+      ctx.beginPath();
+      ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
+      ctx.fillStyle = `rgba(255,255,255,${s.a.toFixed(2)})`;
+      ctx.fill();
+    }
+    requestAnimationFrame(draw);
+  }
+  window.addEventListener('resize', resize);
+  resize();
+  draw();
+})();
+
+/* ── Confetti burst ─────────────────────────────────────── */
+function confetti(n = 50) {
+  const colors = ['#ff4d6d','#00b4d8','#ffd60a','#a8ff78','#ff6b35','#c77dff'];
+  for (let i = 0; i < n; i++) {
+    const el = document.createElement('div');
+    el.className = 'confetti';
+    const size = Math.random() * 9 + 5;
+    el.style.cssText = `
+      left:${Math.random() * 100}vw;
+      width:${size}px; height:${size}px;
+      background:${colors[~~(Math.random()*colors.length)]};
+      border-radius:${Math.random()>0.5?'50%':'3px'};
+      --d:${(Math.random()*2+2).toFixed(1)}s;
+      --delay:${(Math.random()*1.8).toFixed(2)}s;
+    `;
+    document.body.appendChild(el);
+    el.addEventListener('animationend', () => el.remove());
+  }
+}
+
+/* ── Trash talk lines ───────────────────────────────────── */
+const TRASH = {
+  hatzBig: [
+    "Hatz is out here collecting pentakills like Pokémon 🃏",
+    "Water's champion pool is considering early retirement 😔",
+    "Hatz pentakilling his way into Water's nightmares 🌙",
+    "The gap is so large it has its own Zilean ult ⏳",
+    "Water when he checks the scoreboard: 🙂 (he is not okay)",
+    "Hatz said 'I eat ARAMs for breakfast' and he absolutely meant it 🍳",
+    "Water's therapist is going to have a very busy week 📋",
+  ],
+  waterBig: [
+    "Water collecting pentakills like it's a full-time job 💼",
+    "Hatz is down so bad even his team feels bad for him 😬",
+    "Water out here pentakilling like it's a personality trait 💧",
+    "The only thing rising faster than Water's count is Hatz's blood pressure 📈",
+    "Water said 'hold my Nunu' and went absolutely feral ❄️",
+    "Hatz staring at this scoreboard like it personally wronged him 👀",
+    "Water's pentakills have their own Wikipedia page at this point 📚",
+  ],
+  close: [
+    "THIS IS TOO CLOSE. Someone pick Sivir. NOW. 😤",
+    "Neck and neck — just like their mutual hatred of losing 🤝",
+    "One pentakill away from glory or grief. No pressure 👀",
+    "The tension is thicker than Mundo's health bar 💪",
+    "It could go either way. Both players are equally delusional 🫠",
+    "The scoreboard is dangerously spicy right now 🌶️",
+  ],
+  tied: [
+    "DEAD EVEN. One of them needs to get good. Like right now. 🚨",
+    "They're tied. Both should be embarrassed. Equally. 😐",
+    "Perfect symmetry. Equal skill. Equal cringe. 🪞",
+    "Tied score = a diplomatic incident waiting to happen 💣",
+    "Fate has them at 0-0. Fate is clearly trolling 🎭",
+  ],
+  noData: [
+    "Scoreboard is loading... or they both went AFK 🤔",
+    "No data yet. Run the scraper and witness the carnage 🗡️",
+  ],
+};
+
+function pickLine(h, w) {
+  const diff = Math.abs(h - w);
+  let pool;
+  if (h === 0 && w === 0) pool = TRASH.noData;
+  else if (h === w)        pool = TRASH.tied;
+  else if (diff <= 2)      pool = TRASH.close;
+  else if (h > w)          pool = TRASH.hatzBig;
+  else                     pool = TRASH.waterBig;
+  return pool[~~(Math.random() * pool.length)];
+}
+
+/* ── Render data ────────────────────────────────────────── */
+let trashTimer;
+
+function render(d) {
+  const h = d.hatz.pentakills;
+  const w = d.water.pentakills;
+  const diff = h - w;
+  const absDiff = Math.abs(diff);
+
+  document.getElementById('count-hatz').textContent = h;
+  document.getElementById('count-water').textContent = w;
+  document.getElementById('last-updated').textContent = d.lastUpdated || 'Unknown';
+
+  // Diff pill
+  const pill = document.getElementById('diff-pill');
+  if (absDiff === 0) {
+    pill.textContent = 'TIED';
+  } else {
+    pill.textContent = `+${absDiff} ${diff > 0 ? 'HATZ' : 'WATER'}`;
+  }
+
+  // Card states
+  const cardH = document.getElementById('card-hatz');
+  const cardW = document.getElementById('card-water');
+  const crownH = document.getElementById('crown-hatz');
+  const crownW = document.getElementById('crown-water');
+  const stH = document.getElementById('status-hatz');
+  const stW = document.getElementById('status-water');
+
+  // Reset
+  cardH.classList.remove('winner');
+  cardW.classList.remove('winner');
+  crownH.textContent = '';
+  crownH.className = '';
+  crownW.textContent = '';
+  crownW.className = '';
+
+  if (diff > 0) {
+    cardH.classList.add('winner');
+    crownH.textContent = '👑'; crownH.className = 'crown';
+    stH.textContent = '🔥 Winning'; stH.className = 'status-badge status-winning';
+    stW.textContent = '💀 Losing';  stW.className = 'status-badge status-losing';
+    confetti(45);
+  } else if (diff < 0) {
+    cardW.classList.add('winner');
+    crownW.textContent = '👑'; crownW.className = 'crown';
+    stW.textContent = '🔥 Winning'; stW.className = 'status-badge status-winning';
+    stH.textContent = '💀 Losing';  stH.className = 'status-badge status-losing';
+    confetti(45);
+  } else {
+    stH.textContent = '🤝 Tied'; stH.className = 'status-badge status-tied';
+    stW.textContent = '🤝 Tied'; stW.className = 'status-badge status-tied';
+  }
+
+  // Rotating trash talk
+  clearInterval(trashTimer);
+  const el = document.getElementById('trash-text');
+  const rotate = () => {
+    el.style.opacity = '0';
+    setTimeout(() => {
+      el.textContent = pickLine(h, w);
+      el.style.opacity = '1';
+    }, 380);
+  };
+  rotate();
+  trashTimer = setInterval(rotate, 6500);
+}
+
+/* ── Fetch data.json with cache-bust ────────────────────── */
+async function loadData() {
+  try {
+    const res = await fetch(`data.json?v=${Date.now()}`);
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const data = await res.json();
+    render(data);
+  } catch (err) {
+    document.getElementById('trash-text').textContent =
+      "⚠️ Couldn't load data.json — make sure the scraper has run at least once!";
+    console.error('Failed to load data.json:', err);
+  }
+}
+
+loadData();
+</script>
+</body>
+</html>
