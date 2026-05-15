@@ -132,10 +132,13 @@ def fetch_player(info: dict, browser) -> dict:
         ],
     }
 
+    mk = result["multi_kills"]
     print(
         f"  ✅ {info['name']}: {result['pentakills']} pentas | "
         f"{result['win_rate']}% WR | {result['games']} games | "
-        f"{result['avg_kda']['ratio']} KDA"
+        f"{result['avg_kda']['ratio']} KDA\n"
+        f"     Multi-kills → 2x: {mk['double']}  3x: {mk['triple']}  "
+        f"4x: {mk['quadra']}  5x: {result['pentakills']}"
     )
     return result
 
