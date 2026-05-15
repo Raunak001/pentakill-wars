@@ -40,18 +40,26 @@
     }
 
     /* ── Header ── */
-    header { text-align: center; margin-bottom: 36px; }
+    header {
+      text-align: center;
+      margin-bottom: 36px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
 
     .main-title {
       font-family: 'Bebas Neue', sans-serif;
       font-size: clamp(2.8rem, 8vw, 6.5rem);
       letter-spacing: 8px;
       line-height: 1;
+      text-align: center;
+      width: 100%;
       background: linear-gradient(100deg, var(--hatz-color) 0%, var(--gold) 50%, var(--water-color) 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
-      filter: drop-shadow(0 0 18px rgba(255,214,10,0.35));
     }
 
     .subtitle {
@@ -103,8 +111,24 @@
       position: relative;
       overflow: hidden;
       transition: transform 0.3s ease;
+      background-size: cover;
+      background-position: center 15%;
+      background-repeat: no-repeat;
     }
     .player-card:hover { transform: translateY(-5px); }
+
+    /* Photo + dark overlay — sits below all content */
+    .player-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(8, 8, 14, 0.78);
+      z-index: 0;
+      border-radius: 16px;
+    }
+
+    /* All card content sits above the overlay */
+    .player-card > * { position: relative; z-index: 1; }
 
     /* Colored top border glow strip */
     .player-card::after {
@@ -112,10 +136,21 @@
       position: absolute;
       top: 0; left: 0; right: 0;
       height: 3px;
+      z-index: 2;
     }
-    .player-card.hatz { border-color: rgba(255,77,109,0.5); }
+
+    /* hatz.jpg  = beach / sunglasses photo */
+    .player-card.hatz {
+      border-color: rgba(255,77,109,0.5);
+      background-image: url('./hatz.jpg');
+    }
     .player-card.hatz::after { background: linear-gradient(90deg, transparent, var(--hatz-color), transparent); }
-    .player-card.water { border-color: rgba(0,180,216,0.5); }
+
+    /* water.jpg = arms-crossed indoor photo */
+    .player-card.water {
+      border-color: rgba(0,180,216,0.5);
+      background-image: url('./water.jpg');
+    }
     .player-card.water::after { background: linear-gradient(90deg, transparent, var(--water-color), transparent); }
 
     /* Winner glow */
