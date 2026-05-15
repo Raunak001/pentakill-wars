@@ -1,11 +1,95 @@
 {
   "hatz": {
     "name": "Hatz",
-    "pentakills": 0
+    "pentakills": 16,
+    "topChamps": [
+      {
+        "championName": "Akshan",
+        "count": 5
+      },
+      {
+        "championName": "Samira",
+        "count": 3
+      },
+      {
+        "championName": "Ekko",
+        "count": 1
+      },
+      {
+        "championName": "Pantheon",
+        "count": 1
+      },
+      {
+        "championName": "Briar",
+        "count": 1
+      },
+      {
+        "championName": "MonkeyKing",
+        "count": 1
+      },
+      {
+        "championName": "Mel",
+        "count": 1
+      },
+      {
+        "championName": "Caitlyn",
+        "count": 1
+      },
+      {
+        "championName": "Ahri",
+        "count": 1
+      },
+      {
+        "championName": "Yunara",
+        "count": 1
+      }
+    ]
   },
   "water": {
     "name": "Water",
-    "pentakills": 0
+    "pentakills": 13,
+    "topChamps": [
+      {
+        "championName": "Zaahen",
+        "count": 3
+      },
+      {
+        "championName": "Draven",
+        "count": 2
+      },
+      {
+        "championName": "Aurora",
+        "count": 1
+      },
+      {
+        "championName": "Jinx",
+        "count": 1
+      },
+      {
+        "championName": "Vayne",
+        "count": 1
+      },
+      {
+        "championName": "Smolder",
+        "count": 1
+      },
+      {
+        "championName": "Tristana",
+        "count": 1
+      },
+      {
+        "championName": "Gangplank",
+        "count": 1
+      },
+      {
+        "championName": "Pyke",
+        "count": 1
+      },
+      {
+        "championName": "Quinn",
+        "count": 1
+      }
+    ]
   },
-  "lastUpdated": "2026-05-15 18:43 UTC"
+  "lastUpdated": "2026-05-15 19:10 UTC"
 }
