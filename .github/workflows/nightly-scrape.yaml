@@ -1,0 +1,44 @@
+name: ⚡ Nightly Pentakill Scrape
+
+on:
+  # Runs at midnight UTC every night
+  schedule:
+    - cron: '0 0 * * *'
+  # Lets you trigger it manually from the GitHub Actions tab (great for first run!)
+  workflow_dispatch:
+
+jobs:
+  scrape:
+    name: Scrape dpm.lol & commit data.json
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write   # needed to push the updated data.json
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install Playwright + Chromium
+        run: |
+          pip install playwright
+          playwright install chromium --with-deps
+
+      - name: Run scraper
+        run: python scraper.py
+
+      - name: Commit & push updated data.json
+        run: |
+          git config user.name  "Pentakill Wars Bot 🤖"
+          git config user.email "bot@pentakill-wars.noreply"
+          git add data.json
+          # Only commit if data.json actually changed
+          git diff --staged --quiet \
+            && echo "No changes to data.json — scores unchanged." \
+            || git commit -m "⚡ Nightly update — $(date -u +'%Y-%m-%d %H:%M UTC')"
+          git push
