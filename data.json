@@ -2,28 +2,28 @@
   "hatz": {
     "name": "Hatz",
     "pentakills": 16,
-    "win_rate": 50.2,
-    "games": 556,
-    "wins": 279,
+    "win_rate": 50.6,
+    "games": 561,
+    "wins": 284,
     "losses": 277,
     "avg_kda": {
       "kills": 12.6,
-      "deaths": 10.1,
+      "deaths": 10,
       "assists": 24.2,
-      "ratio": 3.65
+      "ratio": 3.66
     },
     "multi_kills": {
-      "double": 1168,
-      "triple": 283,
+      "double": 1175,
+      "triple": 284,
       "quadra": 53
     },
     "top_champs": [
       {
         "name": "Ekko",
         "image_url": "https://opgg-static.akamaized.net/meta/images/lol/16.10.1/champion/Ekko.png",
-        "win_rate": 65,
-        "plays": 34,
-        "kda": 3.52
+        "win_rate": 66,
+        "plays": 35,
+        "kda": 3.53
       },
       {
         "name": "Akshan",
@@ -58,20 +58,20 @@
   "water": {
     "name": "Water",
     "pentakills": 15,
-    "win_rate": 53.7,
-    "games": 369,
-    "wins": 198,
-    "losses": 171,
+    "win_rate": 53.9,
+    "games": 382,
+    "wins": 206,
+    "losses": 176,
     "avg_kda": {
-      "kills": 13.9,
-      "deaths": 11.1,
+      "kills": 13.8,
+      "deaths": 11,
       "assists": 22.2,
       "ratio": 3.26
     },
     "multi_kills": {
-      "double": 884,
-      "triple": 219,
-      "quadra": 65
+      "double": 910,
+      "triple": 225,
+      "quadra": 66
     },
     "top_champs": [
       {
@@ -89,18 +89,18 @@
         "kda": 3.54
       },
       {
+        "name": "Aurora",
+        "image_url": "https://opgg-static.akamaized.net/meta/images/lol/16.10.1/champion/Aurora.png",
+        "win_rate": 54,
+        "plays": 13,
+        "kda": 3.46
+      },
+      {
         "name": "Jinx",
         "image_url": "https://opgg-static.akamaized.net/meta/images/lol/16.10.1/champion/Jinx.png",
         "win_rate": 67,
         "plays": 12,
         "kda": 3.63
-      },
-      {
-        "name": "Aurora",
-        "image_url": "https://opgg-static.akamaized.net/meta/images/lol/16.10.1/champion/Aurora.png",
-        "win_rate": 58,
-        "plays": 12,
-        "kda": 3.53
       },
       {
         "name": "Ezreal",
@@ -111,5 +111,5 @@
       }
     ]
   },
-  "lastUpdated": "2026-05-18 01:56 UTC"
+  "lastUpdated": "2026-05-19 01:55 UTC"
 }
