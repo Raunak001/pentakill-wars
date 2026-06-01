@@ -58,10 +58,10 @@
   "water": {
     "name": "Water",
     "pentakills": 17,
-    "win_rate": 52.6,
-    "games": 435,
-    "wins": 229,
-    "losses": 206,
+    "win_rate": 52.5,
+    "games": 440,
+    "wins": 231,
+    "losses": 209,
     "avg_kda": {
       "kills": 13.9,
       "deaths": 11,
@@ -69,8 +69,8 @@
       "ratio": 3.26
     },
     "multi_kills": {
-      "double": 1082,
-      "triple": 285,
+      "double": 1089,
+      "triple": 286,
       "quadra": 75
     },
     "top_champs": [
@@ -82,18 +82,18 @@
         "kda": 4.53
       },
       {
+        "name": "Draven",
+        "image_url": "https://opgg-static.akamaized.net/meta/images/lol/16.11.1/champion/Draven.png",
+        "win_rate": 71,
+        "plays": 14,
+        "kda": 3.31
+      },
+      {
         "name": "Ryze",
         "image_url": "https://opgg-static.akamaized.net/meta/images/lol/16.11.1/champion/Ryze.png",
         "win_rate": 43,
         "plays": 14,
         "kda": 3.54
-      },
-      {
-        "name": "Draven",
-        "image_url": "https://opgg-static.akamaized.net/meta/images/lol/16.11.1/champion/Draven.png",
-        "win_rate": 77,
-        "plays": 13,
-        "kda": 3.33
       },
       {
         "name": "Aurora",
@@ -111,5 +111,5 @@
       }
     ]
   },
-  "lastUpdated": "2026-05-31 02:00 UTC"
+  "lastUpdated": "2026-06-01 02:09 UTC"
 }
