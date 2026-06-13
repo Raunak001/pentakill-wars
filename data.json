@@ -2,27 +2,27 @@
   "hatz": {
     "name": "Hatz",
     "pentakills": 16,
-    "win_rate": 50.3,
-    "games": 584,
-    "wins": 294,
-    "losses": 290,
+    "win_rate": 50,
+    "games": 612,
+    "wins": 306,
+    "losses": 306,
     "avg_kda": {
       "kills": 12.5,
       "deaths": 10,
       "assists": 23.9,
-      "ratio": 3.62
+      "ratio": 3.63
     },
     "multi_kills": {
-      "double": 1218,
-      "triple": 292,
-      "quadra": 54
+      "double": 1270,
+      "triple": 302,
+      "quadra": 57
     },
     "top_champs": [
       {
         "name": "Ekko",
         "image_url": "https://opgg-static.akamaized.net/meta/images/lol/16.12.1/champion/Ekko.png",
-        "win_rate": 68,
-        "plays": 37,
+        "win_rate": 67,
+        "plays": 39,
         "kda": 3.52
       },
       {
@@ -42,15 +42,15 @@
       {
         "name": "Pantheon",
         "image_url": "https://opgg-static.akamaized.net/meta/images/lol/16.12.1/champion/Pantheon.png",
-        "win_rate": 65,
-        "plays": 23,
-        "kda": 3.71
+        "win_rate": 64,
+        "plays": 25,
+        "kda": 3.72
       },
       {
         "name": "Briar",
         "image_url": "https://opgg-static.akamaized.net/meta/images/lol/16.12.1/champion/Briar.png",
-        "win_rate": 67,
-        "plays": 21,
+        "win_rate": 64,
+        "plays": 22,
         "kda": 3.04
       }
     ]
@@ -111,5 +111,5 @@
       }
     ]
   },
-  "lastUpdated": "2026-06-12 02:06 UTC"
+  "lastUpdated": "2026-06-13 02:00 UTC"
 }
