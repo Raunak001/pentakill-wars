@@ -58,28 +58,35 @@
   "water": {
     "name": "Water",
     "pentakills": 18,
-    "win_rate": 52.0,
-    "games": 454,
-    "wins": 236,
-    "losses": 218,
+    "win_rate": 51.7,
+    "games": 480,
+    "wins": 248,
+    "losses": 232,
     "avg_kda": {
-      "kills": 14.1,
+      "kills": 14,
       "deaths": 11,
       "assists": 21.8,
       "ratio": 3.26
     },
     "multi_kills": {
-      "double": 1145,
-      "triple": 302,
-      "quadra": 80
+      "double": 1212,
+      "triple": 318,
+      "quadra": 84
     },
     "top_champs": [
       {
         "name": "Jhin",
         "image_url": "https://opgg-static.akamaized.net/meta/images/lol/16.12.1/champion/Jhin.png",
-        "win_rate": 61,
-        "plays": 18,
-        "kda": 4.45
+        "win_rate": 60,
+        "plays": 20,
+        "kda": 4.29
+      },
+      {
+        "name": "Kindred",
+        "image_url": "https://opgg-static.akamaized.net/meta/images/lol/16.12.1/champion/Kindred.png",
+        "win_rate": 44,
+        "plays": 16,
+        "kda": 3.74
       },
       {
         "name": "Ryze",
@@ -96,13 +103,6 @@
         "kda": 3.31
       },
       {
-        "name": "Kindred",
-        "image_url": "https://opgg-static.akamaized.net/meta/images/lol/16.12.1/champion/Kindred.png",
-        "win_rate": 36,
-        "plays": 14,
-        "kda": 3.59
-      },
-      {
         "name": "Aurora",
         "image_url": "https://opgg-static.akamaized.net/meta/images/lol/16.12.1/champion/Aurora.png",
         "win_rate": 54,
@@ -111,5 +111,5 @@
       }
     ]
   },
-  "lastUpdated": "2026-06-13 02:00 UTC"
+  "lastUpdated": "2026-06-14 02:09 UTC"
 }
