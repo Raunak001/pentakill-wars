@@ -57,36 +57,43 @@
   },
   "water": {
     "name": "Water",
-    "pentakills": 18,
-    "win_rate": 51.7,
-    "games": 480,
-    "wins": 248,
-    "losses": 232,
+    "pentakills": 20,
+    "win_rate": 51.3,
+    "games": 534,
+    "wins": 274,
+    "losses": 260,
     "avg_kda": {
-      "kills": 14,
+      "kills": 14.2,
       "deaths": 11,
-      "assists": 21.8,
-      "ratio": 3.26
+      "assists": 22,
+      "ratio": 3.29
     },
     "multi_kills": {
-      "double": 1212,
-      "triple": 318,
-      "quadra": 84
+      "double": 1366,
+      "triple": 366,
+      "quadra": 97
     },
     "top_champs": [
       {
         "name": "Jhin",
         "image_url": "https://opgg-static.akamaized.net/meta/images/lol/16.13.1/champion/Jhin.png",
-        "win_rate": 60,
-        "plays": 20,
-        "kda": 4.29
+        "win_rate": 55,
+        "plays": 22,
+        "kda": 4.28
+      },
+      {
+        "name": "Draven",
+        "image_url": "https://opgg-static.akamaized.net/meta/images/lol/16.13.1/champion/Draven.png",
+        "win_rate": 72,
+        "plays": 18,
+        "kda": 3.29
       },
       {
         "name": "Kindred",
         "image_url": "https://opgg-static.akamaized.net/meta/images/lol/16.13.1/champion/Kindred.png",
-        "win_rate": 44,
-        "plays": 16,
-        "kda": 3.74
+        "win_rate": 47,
+        "plays": 17,
+        "kda": 3.73
       },
       {
         "name": "Ryze",
@@ -96,20 +103,13 @@
         "kda": 3.59
       },
       {
-        "name": "Draven",
-        "image_url": "https://opgg-static.akamaized.net/meta/images/lol/16.13.1/champion/Draven.png",
+        "name": "Jinx",
+        "image_url": "https://opgg-static.akamaized.net/meta/images/lol/16.13.1/champion/Jinx.png",
         "win_rate": 71,
         "plays": 14,
-        "kda": 3.31
-      },
-      {
-        "name": "Aurora",
-        "image_url": "https://opgg-static.akamaized.net/meta/images/lol/16.13.1/champion/Aurora.png",
-        "win_rate": 54,
-        "plays": 13,
-        "kda": 3.46
+        "kda": 3.41
       }
     ]
   },
-  "lastUpdated": "2026-06-24 01:53 UTC"
+  "lastUpdated": "2026-06-25 01:57 UTC"
 }
