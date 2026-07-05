@@ -58,20 +58,20 @@
   "water": {
     "name": "Water",
     "pentakills": 23,
-    "win_rate": 50.4,
-    "games": 569,
-    "wins": 287,
-    "losses": 282,
+    "win_rate": 50.1,
+    "games": 585,
+    "wins": 293,
+    "losses": 292,
     "avg_kda": {
-      "kills": 14.1,
-      "deaths": 11,
+      "kills": 14,
+      "deaths": 11.1,
       "assists": 22.1,
-      "ratio": 3.29
+      "ratio": 3.26
     },
     "multi_kills": {
-      "double": 1453,
-      "triple": 393,
-      "quadra": 104
+      "double": 1474,
+      "triple": 398,
+      "quadra": 106
     },
     "top_champs": [
       {
@@ -111,5 +111,5 @@
       }
     ]
   },
-  "lastUpdated": "2026-07-04 01:26 UTC"
+  "lastUpdated": "2026-07-05 01:42 UTC"
 }
