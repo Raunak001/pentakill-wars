@@ -1,36 +1,50 @@
 {
   "hatz": {
     "name": "Hatz",
-    "pentakills": 19,
-    "win_rate": 49.2,
-    "games": 791,
-    "wins": 389,
-    "losses": 402,
+    "pentakills": 20,
+    "win_rate": 48.5,
+    "games": 850,
+    "wins": 412,
+    "losses": 438,
     "avg_kda": {
       "kills": 12.6,
-      "deaths": 10.3,
-      "assists": 23.2,
-      "ratio": 3.46
+      "deaths": 10.4,
+      "assists": 23,
+      "ratio": 3.44
     },
     "multi_kills": {
-      "double": 1651,
-      "triple": 385,
-      "quadra": 72
+      "double": 1797,
+      "triple": 423,
+      "quadra": 79
     },
     "top_champs": [
       {
         "name": "Ekko",
         "image_url": "https://opgg-static.akamaized.net/meta/images/lol/16.14.1/champion/Ekko.png",
-        "win_rate": 65,
-        "plays": 48,
-        "kda": 3.46
+        "win_rate": 66,
+        "plays": 50,
+        "kda": 3.47
       },
       {
         "name": "Akshan",
         "image_url": "https://opgg-static.akamaized.net/meta/images/lol/16.14.1/champion/Akshan.png",
-        "win_rate": 54,
-        "plays": 39,
-        "kda": 3.28
+        "win_rate": 55,
+        "plays": 40,
+        "kda": 3.3
+      },
+      {
+        "name": "Pantheon",
+        "image_url": "https://opgg-static.akamaized.net/meta/images/lol/16.14.1/champion/Pantheon.png",
+        "win_rate": 66,
+        "plays": 29,
+        "kda": 3.79
+      },
+      {
+        "name": "Briar",
+        "image_url": "https://opgg-static.akamaized.net/meta/images/lol/16.14.1/champion/Briar.png",
+        "win_rate": 57,
+        "plays": 28,
+        "kda": 3.07
       },
       {
         "name": "Wukong",
@@ -38,48 +52,34 @@
         "win_rate": 50,
         "plays": 28,
         "kda": 3.12
-      },
-      {
-        "name": "Pantheon",
-        "image_url": "https://opgg-static.akamaized.net/meta/images/lol/16.14.1/champion/Pantheon.png",
-        "win_rate": 67,
-        "plays": 27,
-        "kda": 3.79
-      },
-      {
-        "name": "Briar",
-        "image_url": "https://opgg-static.akamaized.net/meta/images/lol/16.14.1/champion/Briar.png",
-        "win_rate": 59,
-        "plays": 27,
-        "kda": 3.09
       }
     ]
   },
   "water": {
     "name": "Water",
-    "pentakills": 24,
-    "win_rate": 49.5,
-    "games": 622,
-    "wins": 308,
-    "losses": 314,
+    "pentakills": 27,
+    "win_rate": 48.7,
+    "games": 671,
+    "wins": 327,
+    "losses": 344,
     "avg_kda": {
-      "kills": 14,
+      "kills": 13.9,
       "deaths": 11.1,
-      "assists": 22.1,
-      "ratio": 3.25
+      "assists": 22,
+      "ratio": 3.23
     },
     "multi_kills": {
-      "double": 1560,
-      "triple": 413,
-      "quadra": 108
+      "double": 1664,
+      "triple": 437,
+      "quadra": 115
     },
     "top_champs": [
       {
         "name": "Jhin",
         "image_url": "https://opgg-static.akamaized.net/meta/images/lol/16.14.1/champion/Jhin.png",
-        "win_rate": 58,
-        "plays": 24,
-        "kda": 4.45
+        "win_rate": 60,
+        "plays": 25,
+        "kda": 4.52
       },
       {
         "name": "Draven",
@@ -91,25 +91,25 @@
       {
         "name": "Kindred",
         "image_url": "https://opgg-static.akamaized.net/meta/images/lol/16.14.1/champion/Kindred.png",
-        "win_rate": 44,
-        "plays": 18,
-        "kda": 3.65
+        "win_rate": 42,
+        "plays": 19,
+        "kda": 3.68
       },
       {
         "name": "Kog'Maw",
         "image_url": "https://opgg-static.akamaized.net/meta/images/lol/16.14.1/champion/KogMaw.png",
-        "win_rate": 59,
-        "plays": 17,
-        "kda": 3.26
+        "win_rate": 56,
+        "plays": 18,
+        "kda": 3.19
       },
       {
-        "name": "Vayne",
-        "image_url": "https://opgg-static.akamaized.net/meta/images/lol/16.14.1/champion/Vayne.png",
-        "win_rate": 56,
-        "plays": 16,
-        "kda": 2.54
+        "name": "Ryze",
+        "image_url": "https://opgg-static.akamaized.net/meta/images/lol/16.14.1/champion/Ryze.png",
+        "win_rate": 41,
+        "plays": 17,
+        "kda": 3.55
       }
     ]
   },
-  "lastUpdated": "2026-07-20 01:20 UTC"
+  "lastUpdated": "2026-07-23 01:22 UTC"
 }
