@@ -2,27 +2,27 @@
   "hatz": {
     "name": "Hatz",
     "pentakills": 20,
-    "win_rate": 48.5,
-    "games": 850,
-    "wins": 412,
-    "losses": 438,
+    "win_rate": 48.7,
+    "games": 855,
+    "wins": 416,
+    "losses": 439,
     "avg_kda": {
-      "kills": 12.6,
+      "kills": 12.7,
       "deaths": 10.4,
       "assists": 23,
       "ratio": 3.44
     },
     "multi_kills": {
-      "double": 1797,
-      "triple": 423,
+      "double": 1818,
+      "triple": 427,
       "quadra": 79
     },
     "top_champs": [
       {
         "name": "Ekko",
         "image_url": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/champion/Ekko.png",
-        "win_rate": 66,
-        "plays": 50,
+        "win_rate": 67,
+        "plays": 51,
         "kda": 3.47
       },
       {
@@ -58,28 +58,35 @@
   "water": {
     "name": "Water",
     "pentakills": 27,
-    "win_rate": 48.7,
-    "games": 671,
-    "wins": 327,
-    "losses": 344,
+    "win_rate": 48.9,
+    "games": 704,
+    "wins": 344,
+    "losses": 360,
     "avg_kda": {
-      "kills": 13.9,
+      "kills": 13.8,
       "deaths": 11.1,
-      "assists": 22,
-      "ratio": 3.23
+      "assists": 22.3,
+      "ratio": 3.24
     },
     "multi_kills": {
-      "double": 1664,
-      "triple": 437,
-      "quadra": 115
+      "double": 1731,
+      "triple": 459,
+      "quadra": 120
     },
     "top_champs": [
       {
         "name": "Jhin",
         "image_url": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/champion/Jhin.png",
-        "win_rate": 60,
-        "plays": 25,
-        "kda": 4.52
+        "win_rate": 58,
+        "plays": 26,
+        "kda": 4.45
+      },
+      {
+        "name": "Kindred",
+        "image_url": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/champion/Kindred.png",
+        "win_rate": 40,
+        "plays": 20,
+        "kda": 3.58
       },
       {
         "name": "Draven",
@@ -89,27 +96,20 @@
         "kda": 3.32
       },
       {
-        "name": "Kindred",
-        "image_url": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/champion/Kindred.png",
-        "win_rate": 42,
-        "plays": 19,
-        "kda": 3.68
-      },
-      {
         "name": "Kog'Maw",
         "image_url": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/champion/KogMaw.png",
-        "win_rate": 56,
-        "plays": 18,
-        "kda": 3.19
+        "win_rate": 53,
+        "plays": 19,
+        "kda": 3.16
       },
       {
         "name": "Ryze",
         "image_url": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/champion/Ryze.png",
-        "win_rate": 41,
-        "plays": 17,
-        "kda": 3.55
+        "win_rate": 37,
+        "plays": 19,
+        "kda": 3.36
       }
     ]
   },
-  "lastUpdated": "2026-07-30 01:09 UTC"
+  "lastUpdated": "2026-07-31 01:22 UTC"
 }
