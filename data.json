@@ -58,28 +58,28 @@
   "water": {
     "name": "Water",
     "pentakills": 27,
-    "win_rate": 48.9,
-    "games": 704,
-    "wins": 344,
-    "losses": 360,
+    "win_rate": 47.9,
+    "games": 733,
+    "wins": 351,
+    "losses": 382,
     "avg_kda": {
-      "kills": 13.8,
+      "kills": 13.6,
       "deaths": 11.1,
-      "assists": 22.3,
-      "ratio": 3.24
+      "assists": 22.2,
+      "ratio": 3.21
     },
     "multi_kills": {
-      "double": 1731,
-      "triple": 459,
+      "double": 1771,
+      "triple": 467,
       "quadra": 120
     },
     "top_champs": [
       {
         "name": "Jhin",
         "image_url": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/champion/Jhin.png",
-        "win_rate": 58,
-        "plays": 26,
-        "kda": 4.45
+        "win_rate": 57,
+        "plays": 28,
+        "kda": 4.4
       },
       {
         "name": "Kindred",
@@ -111,5 +111,5 @@
       }
     ]
   },
-  "lastUpdated": "2026-08-08 00:38 UTC"
+  "lastUpdated": "2026-08-09 00:40 UTC"
 }
