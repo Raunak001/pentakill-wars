@@ -57,21 +57,21 @@
   },
   "water": {
     "name": "Water",
-    "pentakills": 27,
-    "win_rate": 47.9,
-    "games": 733,
-    "wins": 351,
-    "losses": 382,
+    "pentakills": 28,
+    "win_rate": 47.7,
+    "games": 745,
+    "wins": 355,
+    "losses": 390,
     "avg_kda": {
       "kills": 13.6,
       "deaths": 11.1,
-      "assists": 22.2,
-      "ratio": 3.21
+      "assists": 22.1,
+      "ratio": 3.2
     },
     "multi_kills": {
-      "double": 1771,
-      "triple": 467,
-      "quadra": 120
+      "double": 1800,
+      "triple": 477,
+      "quadra": 122
     },
     "top_champs": [
       {
@@ -84,9 +84,16 @@
       {
         "name": "Kindred",
         "image_url": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/champion/Kindred.png",
-        "win_rate": 40,
+        "win_rate": 38,
+        "plays": 21,
+        "kda": 3.53
+      },
+      {
+        "name": "Kog'Maw",
+        "image_url": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/champion/KogMaw.png",
+        "win_rate": 50,
         "plays": 20,
-        "kda": 3.58
+        "kda": 3.13
       },
       {
         "name": "Draven",
@@ -94,13 +101,6 @@
         "win_rate": 68,
         "plays": 19,
         "kda": 3.32
-      },
-      {
-        "name": "Kog'Maw",
-        "image_url": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/champion/KogMaw.png",
-        "win_rate": 53,
-        "plays": 19,
-        "kda": 3.16
       },
       {
         "name": "Ryze",
@@ -111,5 +111,5 @@
       }
     ]
   },
-  "lastUpdated": "2026-08-14 00:50 UTC"
+  "lastUpdated": "2026-08-15 00:27 UTC"
 }
