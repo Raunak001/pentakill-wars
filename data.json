@@ -2,35 +2,35 @@
   "hatz": {
     "name": "Hatz",
     "pentakills": 20,
-    "win_rate": 48.7,
-    "games": 855,
-    "wins": 416,
-    "losses": 439,
+    "win_rate": 48.4,
+    "games": 862,
+    "wins": 417,
+    "losses": 445,
     "avg_kda": {
       "kills": 12.7,
       "deaths": 10.4,
       "assists": 23,
-      "ratio": 3.44
+      "ratio": 3.43
     },
     "multi_kills": {
-      "double": 1818,
-      "triple": 427,
+      "double": 1827,
+      "triple": 428,
       "quadra": 79
     },
     "top_champs": [
       {
         "name": "Ekko",
         "image_url": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/champion/Ekko.png",
-        "win_rate": 67,
-        "plays": 51,
+        "win_rate": 65,
+        "plays": 52,
         "kda": 3.47
       },
       {
         "name": "Akshan",
         "image_url": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/champion/Akshan.png",
-        "win_rate": 55,
-        "plays": 40,
-        "kda": 3.3
+        "win_rate": 54,
+        "plays": 41,
+        "kda": 3.26
       },
       {
         "name": "Pantheon",
@@ -111,5 +111,5 @@
       }
     ]
   },
-  "lastUpdated": "2026-08-17 00:27 UTC"
+  "lastUpdated": "2026-08-19 00:26 UTC"
 }
