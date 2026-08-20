@@ -58,28 +58,28 @@
   "water": {
     "name": "Water",
     "pentakills": 28,
-    "win_rate": 47.7,
-    "games": 745,
-    "wins": 355,
-    "losses": 390,
+    "win_rate": 47.1,
+    "games": 763,
+    "wins": 359,
+    "losses": 404,
     "avg_kda": {
-      "kills": 13.6,
+      "kills": 13.5,
       "deaths": 11.1,
-      "assists": 22.1,
-      "ratio": 3.2
+      "assists": 22,
+      "ratio": 3.19
     },
     "multi_kills": {
-      "double": 1800,
-      "triple": 477,
-      "quadra": 122
+      "double": 1838,
+      "triple": 486,
+      "quadra": 124
     },
     "top_champs": [
       {
         "name": "Jhin",
         "image_url": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/champion/Jhin.png",
-        "win_rate": 57,
-        "plays": 28,
-        "kda": 4.4
+        "win_rate": 55,
+        "plays": 29,
+        "kda": 4.36
       },
       {
         "name": "Kindred",
@@ -103,13 +103,13 @@
         "kda": 3.32
       },
       {
-        "name": "Ryze",
-        "image_url": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/champion/Ryze.png",
-        "win_rate": 37,
+        "name": "Viktor",
+        "image_url": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/champion/Viktor.png",
+        "win_rate": 42,
         "plays": 19,
-        "kda": 3.36
+        "kda": 3.89
       }
     ]
   },
-  "lastUpdated": "2026-08-19 00:26 UTC"
+  "lastUpdated": "2026-08-20 00:28 UTC"
 }
