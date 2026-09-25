@@ -20,35 +20,35 @@
     "top_champs": [
       {
         "name": "Ekko",
-        "image_url": "https://opgg-static.akamaized.net/meta/images/lol/16.18.1/champion/Ekko.png",
+        "image_url": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/champion/Ekko.png",
         "win_rate": 63,
         "plays": 60,
         "kda": 3.44
       },
       {
         "name": "Akshan",
-        "image_url": "https://opgg-static.akamaized.net/meta/images/lol/16.18.1/champion/Akshan.png",
+        "image_url": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/champion/Akshan.png",
         "win_rate": 53,
         "plays": 45,
         "kda": 3.22
       },
       {
         "name": "Pantheon",
-        "image_url": "https://opgg-static.akamaized.net/meta/images/lol/16.18.1/champion/Pantheon.png",
+        "image_url": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/champion/Pantheon.png",
         "win_rate": 67,
         "plays": 33,
         "kda": 3.76
       },
       {
         "name": "Wukong",
-        "image_url": "https://opgg-static.akamaized.net/meta/images/lol/16.18.1/champion/MonkeyKing.png",
+        "image_url": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/champion/MonkeyKing.png",
         "win_rate": 47,
         "plays": 32,
         "kda": 3.11
       },
       {
         "name": "Briar",
-        "image_url": "https://opgg-static.akamaized.net/meta/images/lol/16.18.1/champion/Briar.png",
+        "image_url": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/champion/Briar.png",
         "win_rate": 57,
         "plays": 30,
         "kda": 2.96
@@ -76,40 +76,40 @@
     "top_champs": [
       {
         "name": "Jhin",
-        "image_url": "https://opgg-static.akamaized.net/meta/images/lol/16.18.1/champion/Jhin.png",
+        "image_url": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/champion/Jhin.png",
         "win_rate": 58,
         "plays": 38,
         "kda": 4.42
       },
       {
         "name": "Kindred",
-        "image_url": "https://opgg-static.akamaized.net/meta/images/lol/16.18.1/champion/Kindred.png",
+        "image_url": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/champion/Kindred.png",
         "win_rate": 43,
         "plays": 23,
         "kda": 3.45
       },
       {
         "name": "Viktor",
-        "image_url": "https://opgg-static.akamaized.net/meta/images/lol/16.18.1/champion/Viktor.png",
+        "image_url": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/champion/Viktor.png",
         "win_rate": 39,
         "plays": 23,
         "kda": 3.81
       },
       {
         "name": "Vayne",
-        "image_url": "https://opgg-static.akamaized.net/meta/images/lol/16.18.1/champion/Vayne.png",
+        "image_url": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/champion/Vayne.png",
         "win_rate": 55,
         "plays": 22,
         "kda": 2.67
       },
       {
         "name": "Ryze",
-        "image_url": "https://opgg-static.akamaized.net/meta/images/lol/16.18.1/champion/Ryze.png",
+        "image_url": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/champion/Ryze.png",
         "win_rate": 41,
         "plays": 22,
         "kda": 3.49
       }
     ]
   },
-  "lastUpdated": "2026-09-24 01:47 UTC"
+  "lastUpdated": "2026-09-25 02:03 UTC"
 }
