@@ -58,42 +58,49 @@
   "water": {
     "name": "Water",
     "pentakills": 29,
-    "win_rate": 46.6,
-    "games": 874,
-    "wins": 407,
-    "losses": 467,
+    "win_rate": 47.1,
+    "games": 916,
+    "wins": 431,
+    "losses": 485,
     "avg_kda": {
-      "kills": 13.3,
-      "deaths": 11.2,
-      "assists": 22.1,
-      "ratio": 3.16
+      "kills": 13.2,
+      "deaths": 11.1,
+      "assists": 22,
+      "ratio": 3.17
     },
     "multi_kills": {
-      "double": 2064,
-      "triple": 540,
-      "quadra": 135
+      "double": 2149,
+      "triple": 564,
+      "quadra": 142
     },
     "top_champs": [
       {
         "name": "Jhin",
         "image_url": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/champion/Jhin.png",
-        "win_rate": 58,
-        "plays": 38,
-        "kda": 4.42
-      },
-      {
-        "name": "Kindred",
-        "image_url": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/champion/Kindred.png",
-        "win_rate": 43,
-        "plays": 23,
-        "kda": 3.45
+        "win_rate": 59,
+        "plays": 39,
+        "kda": 4.38
       },
       {
         "name": "Viktor",
         "image_url": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/champion/Viktor.png",
-        "win_rate": 39,
-        "plays": 23,
-        "kda": 3.81
+        "win_rate": 44,
+        "plays": 25,
+        "kda": 3.87
+      },
+      {
+        "name": "Kindred",
+        "image_url": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/champion/Kindred.png",
+        "win_rate": 42,
+        "plays": 24,
+        "kda": 3.4
+      },
+      {
+        "name": "Jinx",
+        "image_url": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/champion/Jinx.png",
+        "win_rate": 64,
+        "plays": 22,
+        "kda": 3.28
       },
       {
         "name": "Vayne",
@@ -101,15 +108,8 @@
         "win_rate": 55,
         "plays": 22,
         "kda": 2.67
-      },
-      {
-        "name": "Ryze",
-        "image_url": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/champion/Ryze.png",
-        "win_rate": 41,
-        "plays": 22,
-        "kda": 3.49
       }
     ]
   },
-  "lastUpdated": "2026-09-25 02:03 UTC"
+  "lastUpdated": "2026-09-26 02:09 UTC"
 }
