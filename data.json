@@ -1,36 +1,36 @@
 {
   "hatz": {
     "name": "Hatz",
-    "pentakills": 27,
-    "win_rate": 47.5,
-    "games": 1008,
-    "wins": 479,
-    "losses": 529,
+    "pentakills": 32,
+    "win_rate": 47.4,
+    "games": 1086,
+    "wins": 515,
+    "losses": 571,
     "avg_kda": {
       "kills": 12.7,
       "deaths": 10.4,
-      "assists": 22.7,
+      "assists": 22.6,
       "ratio": 3.4
     },
     "multi_kills": {
-      "double": 2171,
-      "triple": 515,
-      "quadra": 101
+      "double": 2339,
+      "triple": 553,
+      "quadra": 109
     },
     "top_champs": [
       {
         "name": "Ekko",
         "image_url": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/champion/Ekko.png",
-        "win_rate": 63,
-        "plays": 60,
-        "kda": 3.44
+        "win_rate": 65,
+        "plays": 62,
+        "kda": 3.45
       },
       {
         "name": "Akshan",
         "image_url": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/champion/Akshan.png",
-        "win_rate": 53,
-        "plays": 45,
-        "kda": 3.22
+        "win_rate": 52,
+        "plays": 46,
+        "kda": 3.21
       },
       {
         "name": "Pantheon",
@@ -42,16 +42,16 @@
       {
         "name": "Wukong",
         "image_url": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/champion/MonkeyKing.png",
-        "win_rate": 47,
-        "plays": 32,
-        "kda": 3.11
+        "win_rate": 45,
+        "plays": 33,
+        "kda": 3.09
       },
       {
-        "name": "Briar",
-        "image_url": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/champion/Briar.png",
-        "win_rate": 57,
-        "plays": 30,
-        "kda": 2.96
+        "name": "Evelynn",
+        "image_url": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/champion/Evelynn.png",
+        "win_rate": 56,
+        "plays": 32,
+        "kda": 2.88
       }
     ]
   },
@@ -111,5 +111,5 @@
       }
     ]
   },
-  "lastUpdated": "2026-09-26 02:09 UTC"
+  "lastUpdated": "2026-09-27 02:01 UTC"
 }
