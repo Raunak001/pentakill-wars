@@ -57,29 +57,29 @@
   },
   "water": {
     "name": "Water",
-    "pentakills": 29,
-    "win_rate": 47.1,
-    "games": 916,
-    "wins": 431,
-    "losses": 485,
+    "pentakills": 31,
+    "win_rate": 46.8,
+    "games": 948,
+    "wins": 444,
+    "losses": 504,
     "avg_kda": {
       "kills": 13.2,
       "deaths": 11.1,
       "assists": 22,
-      "ratio": 3.17
+      "ratio": 3.16
     },
     "multi_kills": {
-      "double": 2149,
-      "triple": 564,
-      "quadra": 142
+      "double": 2233,
+      "triple": 590,
+      "quadra": 149
     },
     "top_champs": [
       {
         "name": "Jhin",
         "image_url": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/champion/Jhin.png",
-        "win_rate": 59,
-        "plays": 39,
-        "kda": 4.38
+        "win_rate": 56,
+        "plays": 41,
+        "kda": 4.26
       },
       {
         "name": "Viktor",
@@ -89,27 +89,27 @@
         "kda": 3.87
       },
       {
+        "name": "Vayne",
+        "image_url": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/champion/Vayne.png",
+        "win_rate": 58,
+        "plays": 24,
+        "kda": 2.85
+      },
+      {
+        "name": "Ryze",
+        "image_url": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/champion/Ryze.png",
+        "win_rate": 42,
+        "plays": 24,
+        "kda": 3.52
+      },
+      {
         "name": "Kindred",
         "image_url": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/champion/Kindred.png",
         "win_rate": 42,
         "plays": 24,
         "kda": 3.4
-      },
-      {
-        "name": "Jinx",
-        "image_url": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/champion/Jinx.png",
-        "win_rate": 64,
-        "plays": 22,
-        "kda": 3.28
-      },
-      {
-        "name": "Vayne",
-        "image_url": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/champion/Vayne.png",
-        "win_rate": 55,
-        "plays": 22,
-        "kda": 2.67
       }
     ]
   },
-  "lastUpdated": "2026-10-03 02:28 UTC"
+  "lastUpdated": "2026-10-04 02:58 UTC"
 }
