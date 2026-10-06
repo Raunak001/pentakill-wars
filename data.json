@@ -1,29 +1,29 @@
 {
   "hatz": {
     "name": "Hatz",
-    "pentakills": 32,
-    "win_rate": 47.4,
-    "games": 1086,
-    "wins": 515,
-    "losses": 571,
+    "pentakills": 33,
+    "win_rate": 47.0,
+    "games": 1128,
+    "wins": 530,
+    "losses": 598,
     "avg_kda": {
       "kills": 12.7,
       "deaths": 10.4,
       "assists": 22.6,
-      "ratio": 3.4
+      "ratio": 3.39
     },
     "multi_kills": {
-      "double": 2339,
-      "triple": 553,
-      "quadra": 109
+      "double": 2436,
+      "triple": 577,
+      "quadra": 113
     },
     "top_champs": [
       {
         "name": "Ekko",
         "image_url": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/champion/Ekko.png",
         "win_rate": 65,
-        "plays": 62,
-        "kda": 3.45
+        "plays": 63,
+        "kda": 3.44
       },
       {
         "name": "Akshan",
@@ -33,6 +33,13 @@
         "kda": 3.21
       },
       {
+        "name": "Wukong",
+        "image_url": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/champion/MonkeyKing.png",
+        "win_rate": 44,
+        "plays": 34,
+        "kda": 3.07
+      },
+      {
         "name": "Pantheon",
         "image_url": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/champion/Pantheon.png",
         "win_rate": 67,
@@ -40,17 +47,10 @@
         "kda": 3.76
       },
       {
-        "name": "Wukong",
-        "image_url": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/champion/MonkeyKing.png",
-        "win_rate": 45,
-        "plays": 33,
-        "kda": 3.09
-      },
-      {
         "name": "Evelynn",
         "image_url": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/champion/Evelynn.png",
-        "win_rate": 56,
-        "plays": 32,
+        "win_rate": 55,
+        "plays": 33,
         "kda": 2.88
       }
     ]
@@ -111,5 +111,5 @@
       }
     ]
   },
-  "lastUpdated": "2026-10-05 02:33 UTC"
+  "lastUpdated": "2026-10-06 03:26 UTC"
 }
