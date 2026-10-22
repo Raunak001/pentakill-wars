@@ -1,57 +1,57 @@
 {
   "hatz": {
     "name": "Hatz",
-    "pentakills": 33,
-    "win_rate": 47.3,
-    "games": 1191,
-    "wins": 563,
-    "losses": 628,
+    "pentakills": 34,
+    "win_rate": 47.5,
+    "games": 1230,
+    "wins": 584,
+    "losses": 646,
     "avg_kda": {
       "kills": 12.7,
       "deaths": 10.4,
-      "assists": 22.6,
-      "ratio": 3.39
+      "assists": 22.5,
+      "ratio": 3.4
     },
     "multi_kills": {
-      "double": 2574,
-      "triple": 607,
-      "quadra": 119
+      "double": 2654,
+      "triple": 632,
+      "quadra": 124
     },
     "top_champs": [
       {
         "name": "Ekko",
-        "image_url": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/champion/Ekko.png",
+        "image_url": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/champion/Ekko.png",
         "win_rate": 66,
-        "plays": 64,
-        "kda": 3.46
+        "plays": 68,
+        "kda": 3.49
       },
       {
         "name": "Akshan",
-        "image_url": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/champion/Akshan.png",
+        "image_url": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/champion/Akshan.png",
         "win_rate": 50,
         "plays": 48,
         "kda": 3.17
       },
       {
         "name": "Pantheon",
-        "image_url": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/champion/Pantheon.png",
+        "image_url": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/champion/Pantheon.png",
         "win_rate": 69,
-        "plays": 35,
-        "kda": 3.78
+        "plays": 36,
+        "kda": 3.76
       },
       {
         "name": "Wukong",
-        "image_url": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/champion/MonkeyKing.png",
-        "win_rate": 46,
-        "plays": 35,
-        "kda": 3.08
+        "image_url": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/champion/MonkeyKing.png",
+        "win_rate": 44,
+        "plays": 36,
+        "kda": 3.05
       },
       {
         "name": "Evelynn",
-        "image_url": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/champion/Evelynn.png",
-        "win_rate": 56,
-        "plays": 34,
-        "kda": 2.92
+        "image_url": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/champion/Evelynn.png",
+        "win_rate": 54,
+        "plays": 35,
+        "kda": 2.9
       }
     ]
   },
@@ -76,40 +76,40 @@
     "top_champs": [
       {
         "name": "Jhin",
-        "image_url": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/champion/Jhin.png",
+        "image_url": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/champion/Jhin.png",
         "win_rate": 56,
         "plays": 41,
         "kda": 4.26
       },
       {
         "name": "Viktor",
-        "image_url": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/champion/Viktor.png",
+        "image_url": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/champion/Viktor.png",
         "win_rate": 42,
         "plays": 26,
         "kda": 3.87
       },
       {
         "name": "Ryze",
-        "image_url": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/champion/Ryze.png",
+        "image_url": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/champion/Ryze.png",
         "win_rate": 44,
         "plays": 25,
         "kda": 3.57
       },
       {
         "name": "Vayne",
-        "image_url": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/champion/Vayne.png",
+        "image_url": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/champion/Vayne.png",
         "win_rate": 58,
         "plays": 24,
         "kda": 2.85
       },
       {
         "name": "Kindred",
-        "image_url": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/champion/Kindred.png",
+        "image_url": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/champion/Kindred.png",
         "win_rate": 42,
         "plays": 24,
         "kda": 3.4
       }
     ]
   },
-  "lastUpdated": "2026-10-21 02:09 UTC"
+  "lastUpdated": "2026-10-22 02:03 UTC"
 }
