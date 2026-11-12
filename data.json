@@ -59,9 +59,9 @@
     "name": "Water",
     "pentakills": 31,
     "win_rate": 46.7,
-    "games": 1003,
-    "wins": 468,
-    "losses": 535,
+    "games": 1007,
+    "wins": 470,
+    "losses": 537,
     "avg_kda": {
       "kills": 13.2,
       "deaths": 11.1,
@@ -69,17 +69,17 @@
       "ratio": 3.15
     },
     "multi_kills": {
-      "double": 2350,
-      "triple": 616,
+      "double": 2356,
+      "triple": 617,
       "quadra": 156
     },
     "top_champs": [
       {
         "name": "Jhin",
         "image_url": "https://opgg-static.akamaized.net/meta/images/lol/16.22.1/champion/Jhin.png",
-        "win_rate": 55,
-        "plays": 42,
-        "kda": 4.24
+        "win_rate": 56,
+        "plays": 43,
+        "kda": 4.19
       },
       {
         "name": "Viktor",
@@ -111,5 +111,5 @@
       }
     ]
   },
-  "lastUpdated": "2026-11-11 03:18 UTC"
+  "lastUpdated": "2026-11-12 04:29 UTC"
 }
