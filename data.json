@@ -59,19 +59,19 @@
     "name": "Water",
     "pentakills": 32,
     "win_rate": 46.5,
-    "games": 1031,
-    "wins": 479,
-    "losses": 552,
+    "games": 1056,
+    "wins": 491,
+    "losses": 565,
     "avg_kda": {
-      "kills": 13.1,
+      "kills": 13.2,
       "deaths": 11.1,
       "assists": 21.9,
       "ratio": 3.15
     },
     "multi_kills": {
-      "double": 2409,
-      "triple": 631,
-      "quadra": 160
+      "double": 2483,
+      "triple": 654,
+      "quadra": 164
     },
     "top_champs": [
       {
@@ -82,6 +82,13 @@
         "kda": 4.17
       },
       {
+        "name": "Vayne",
+        "image_url": "https://opgg-static.akamaized.net/meta/images/lol/16.23.1/champion/Vayne.png",
+        "win_rate": 52,
+        "plays": 27,
+        "kda": 2.79
+      },
+      {
         "name": "Viktor",
         "image_url": "https://opgg-static.akamaized.net/meta/images/lol/16.23.1/champion/Viktor.png",
         "win_rate": 44,
@@ -89,27 +96,20 @@
         "kda": 3.95
       },
       {
-        "name": "Vayne",
-        "image_url": "https://opgg-static.akamaized.net/meta/images/lol/16.23.1/champion/Vayne.png",
-        "win_rate": 54,
-        "plays": 26,
-        "kda": 2.8
-      },
-      {
         "name": "Ryze",
         "image_url": "https://opgg-static.akamaized.net/meta/images/lol/16.23.1/champion/Ryze.png",
-        "win_rate": 42,
-        "plays": 26,
-        "kda": 3.54
+        "win_rate": 41,
+        "plays": 27,
+        "kda": 3.5
       },
       {
         "name": "Kindred",
         "image_url": "https://opgg-static.akamaized.net/meta/images/lol/16.23.1/champion/Kindred.png",
-        "win_rate": 42,
-        "plays": 24,
-        "kda": 3.4
+        "win_rate": 40,
+        "plays": 25,
+        "kda": 3.33
       }
     ]
   },
-  "lastUpdated": "2026-11-27 05:31 UTC"
+  "lastUpdated": "2026-11-28 05:06 UTC"
 }
